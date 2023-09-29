@@ -4,7 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <img src="/assets/WebSiteIcon@2x.png" height="48" style="float: left; padding: 4px"><a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> <span style="color: #BBB">{{ page.title | escape | downcase }}</span>
+    <img src="/assets/WebSiteIcon@2x.png" height="48" style="float: left; padding: 4px"><a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> <span class="site-title" style="color: #BBB"> / {{ page.title | escape | downcase }}</span>
   </div>
   
 </header>
