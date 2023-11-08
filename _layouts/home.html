@@ -27,11 +27,14 @@ layout: base
       {%- for post in posts -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
+        {% comment %}
+        Changing this from h3 to h2 to fix SEO/A11y issues
+        {% endcomment %}
+        <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
+        </h2>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
